@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="/style.css">
+<body>
+
+    <h1>All Chats Represent This page</h1>
+
+    <form method="get" action="http://localhost:8080/new">
+        <button>new chat</button>
+    </form>
+
+    <% for( let i= 0;i<rowdata.length;i++) { %>
+        <div class="all">
+            <img src="<%= rowdata[i].profile %>" class="pro" >
+            <p class="her"><b>from:<i><%= rowdata[i].from %></i></b></p>
+            
+            <div class="msg">
+            <p>msg:<%= rowdata[i].msg %></b></p>
+            
+    <form method="get" action="http://localhost:8080/edit/<%= rowdata[i]._id%>">
+                <button>Edit msg</button>
+                </form>
+                <form method="post" action="http://localhost:8080/delete/<%= rowdata[i]._id%>">
+                    <button>Delete msg</button>
+                    </form>
+            </div>
+            <br>
+            <br>
+<form method="get" action="http://localhost:8080/editimg/<%= rowdata[i]._id %>">
+            <img src="<%= rowdata[i].img %>" width="180px" class="ran">
+            <button>update image</button>
+            </form>
+            
+            <p><b class="she">to:<i><%= rowdata[i].to%></i></b></p>
+           
+            
+
+            <p><%= rowdata[i].created_at.toString().split(" ")[4] %></p>
+            <p><%= rowdata[i].created_at.toString().split(" ").slice(0,4).join(" ")%></p>
+            <form method="post" action="/post/<%=rowdata[i]._id%>?_method=DELETE">
+                <button>Delete post</button>
+            </form>
+            <hr>
+            </div>
+            <br>
+            <br>
+     <% } %>
+</body>
+</html>

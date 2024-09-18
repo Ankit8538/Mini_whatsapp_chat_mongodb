@@ -1,0 +1,45 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+    background-color: black;
+    
+}
+h1
+{
+    color: white;
+}
+.all
+{
+    background-image: url("https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg");
+    padding: 20px;
+    border-radius: 16px;
+    display: inline-block;
+}
+
+
+.msg
+{
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 10px;
+}
+.ran{
+    border-radius: 16px;
+}
+.pro
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.her{
+    display: inline;
+    font-size: 20px;
+    color: red;
+}
+.she
+{
+   font-size: 20px; 
+   color: red;
+}
